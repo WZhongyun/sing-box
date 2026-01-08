@@ -1,0 +1,68 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "local-dns",
+        "address": "223.5.5.5",
+        "detour": "direct"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "type": "shadowtls",
+      "tag": "shadowtls-in",
+      "listen": "::",
+      "listen_port": 443,
+      "version": 3,
+      "password": "CHANGE_ME_SHADOWTLS_PASSWORD",
+      "users": [
+        {
+          "name": "user1",
+          "password": "CHANGE_ME_USER_PASSWORD"
+        }
+      ],
+      "handshake": {
+        "server": "www.bing.com",
+        "server_port": 443
+      },
+      "strict_mode": true,
+      "detour": "shadowsocks-in"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-in",
+      "listen": "127.0.0.1",
+      "listen_port": 8388,
+      "method": "2022-blake3-aes-128-gcm",
+      "password": "CHANGE_ME_SHADOWSOCKS_PASSWORD",
+      "multiplex": {
+        "enabled": true,
+        "padding": true
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "direct"
+      }
+    ],
+    "final": "direct"
+  }
+}
