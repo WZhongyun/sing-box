@@ -22,10 +22,6 @@
     ],
     "rules": [
       {
-        "outbound": "any",
-        "server": "local-dns"
-      },
-      {
         "domain_suffix": [".cn"],
         "server": "local-dns"
       },
@@ -118,11 +114,6 @@
       {
         "protocol": "dns",
         "outbound": "dns-out"
-      },
-      {
-        "network": "udp",
-        "port": 443,
-        "outbound": "block"
       },
       {
         "rule_set": "geoip-cn",
