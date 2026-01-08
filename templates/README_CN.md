@@ -66,8 +66,10 @@ sing-box run -c server-shadowtls-shadowsocks.json
 2. 修改以下字段：
    - `outbounds[0].server`: 填入服务器 IP 或域名
    - `outbounds[0].server_port`: 填入服务端监听端口
-   - `outbounds[0].detour`: 确保指向 shadowtls-out
+   - `outbounds[0].password`: 填入与服务端相同的 Shadowsocks 密码
    - `outbounds[1].password`: 填入与服务端相同的 ShadowTLS 用户密码
+   - `outbounds[1].server`: 填入服务器 IP 或域名（与 outbounds[0] 相同）
+   - `outbounds[1].server_port`: 填入服务端监听端口（与 outbounds[0] 相同）
    - `outbounds[1].tls.server_name`: 填入与服务端握手服务器相同的域名
    - 根据需要调整 DNS 服务器和路由规则
 
