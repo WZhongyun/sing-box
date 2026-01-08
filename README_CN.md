@@ -4,6 +4,22 @@
 
 **sing-box** 是一个通用代理平台（The universal proxy platform），旨在提供一个功能强大、高性能的网络代理解决方案。该项目使用 Go 语言开发，支持多种代理协议和功能。
 
+## 🚀 快速开始
+
+想要快速配置 sing-box？我们提供了配置模板和自动生成工具！
+
+**查看 [templates/](./templates/) 目录获取：**
+- ✨ 服务端/客户端配置模板（ShadowTLS + Shadowsocks）
+- 🛠️ 一键配置生成脚本
+- 📖 详细的使用说明和最佳实践
+
+**一条命令生成配置：**
+```bash
+cd templates && ./generate-config.sh
+```
+
+详情请参阅 [templates/README_CN.md](./templates/README_CN.md)
+
 ### 基本信息
 
 - **项目名称**: sing-box
