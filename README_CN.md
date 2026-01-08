@@ -186,11 +186,11 @@ sing-box 使用 JSON 格式的配置文件，支持：
 
 ### 构建标签
 
-项目使用以下默认构建标签：
+项目使用以下默认构建标签（详见 `Makefile` 中的 `TAGS` 变量）：
 ```
 with_gvisor,with_quic,with_dhcp,with_wireguard,
 with_utls,with_acme,with_clash_api,with_tailscale,
-with_ccm,with_ocm
+with_ccm,with_ocm,badlinkname,tfogo_checklinkname0
 ```
 
 ### 构建命令
@@ -307,12 +307,19 @@ sing-box 适用于以下场景：
 - **资源高效**: 内存和 CPU 使用效率高
 - **可扩展**: 模块化设计，易于扩展新功能
 
+## 赞助商
+
+本项目由 [Warp](https://go.warp.dev/sing-box) 赞助支持。Warp 是一个专为使用多个 AI 代理进行编码而构建的开发工具。
+
+<a href="https://go.warp.dev/sing-box">
+<img alt="Warp sponsorship" width="400" src="https://github.com/warpdotdev/brand-assets/raw/refs/heads/main/Github/Sponsor/Warp-Github-LG-02.png">
+</a>
+
 ## 社区和支持
 
 - **官方文档**: https://sing-box.sagernet.org
 - **GitHub 仓库**: https://github.com/SagerNet/sing-box
 - **问题反馈**: 通过 GitHub Issues 提交
-- **赞助支持**: 由 [Warp](https://go.warp.dev/sing-box) 赞助
 
 ## 开发状态
 
